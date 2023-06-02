@@ -1,26 +1,12 @@
 #[contract]
 mod simple_storage {
 
-    struct Storage {
-        n: u32,
-    }
+    //STEP 1: Declare a storage variable 'n'
 
-    #[constructor]
-    fn init(num: u32) {
-        n::write(num);
-    }
+    //STEP 2: Define a constructor
 
-    #[view]
-    fn store(num: u32) {
-        n::write(num);
-    }
+    //STEP 3: Define a view function
 
-    #[external]
-    fn retrieve() -> u32 {
-        let num = n::read();
-        num
-    }
-
-
+    //STEP 4: Define an external function
 
 }
